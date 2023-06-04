@@ -39,6 +39,7 @@ function FormularioIngredientes() {
             .then((data) => {
                 if (data.status === 200) {
                     Swal.fire('Agregado el Ingrediente', data.menssage, 'success')
+                    ingrediente.id = data.data.insertId
                     agregarIngrediente(ingrediente)
                 } else if (data.status === 400) {
                     Swal.fire('Ocurrio un error', data.menssage, 'error')

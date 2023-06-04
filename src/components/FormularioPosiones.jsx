@@ -49,7 +49,8 @@ function FormularioPosiones() {
             .then((data) => {
                 if (data.status === 200) {
                     Swal.fire('Agregada la Posion', data.menssage, 'success')
-                    crearPosion()
+                    posion.id = data.data.insertId
+                    crearPosion(posion)
                 } else if (data.status === 400) {
                     Swal.fire('Ocurrio un error', data.menssage, 'error')
                 }

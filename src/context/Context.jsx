@@ -70,12 +70,12 @@ export function ContextoProvider(props) {
             });
     }
 
-    function crearPosion() {
-        cargarPosiones()
+    function crearPosion(posion) {
+        setPosiones([...posiones, posion])
     }
 
-    function agregarIngrediente() {
-        cargarIngredientes()
+    function agregarIngrediente(ingrediente) {
+        setIngredientes([...ingredientes, ingrediente])
     }
 
     function eliminarIngrediente(id) {
