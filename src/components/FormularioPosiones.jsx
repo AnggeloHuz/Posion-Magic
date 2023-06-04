@@ -5,6 +5,7 @@ import { Contexto } from "../context/Context";
 function FormularioPosiones() {
     
     const Context = useContext(Contexto)
+    const { crearPosion } = useContext(Contexto)
 
     const [nombre, setNombre] = useState('');
     const [imagen, setImagen] = useState('');
@@ -48,6 +49,7 @@ function FormularioPosiones() {
             .then((data) => {
                 if (data.status === 200) {
                     Swal.fire('Agregada la Posion', data.menssage, 'success')
+                    crearPosion()
                 } else if (data.status === 400) {
                     Swal.fire('Ocurrio un error', data.menssage, 'error')
                 }
@@ -58,8 +60,8 @@ function FormularioPosiones() {
     }
 
     return (
-        <div className="w-full md:w-3/4 h-full p-8 xl:p-16 bg-black rounded-xl border-[3px] border-indigo-400">
-            <form className="w-full h-full"
+        <div className="w-full md:w-full h-full p-8 xl:p-16 bg-black rounded-xl border-[3px] border-indigo-400">
+            <form className="w-full h-full text-start"
                 onSubmit={e => {
                     e.preventDefault()
                     setNombre('');

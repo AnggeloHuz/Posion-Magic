@@ -17,7 +17,7 @@ function ModalPosion({data}) {
                     <div
                         className="m-4 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                     >
-                        <div className="relative w-1/2 my-6 mx-auto max-w-3xl ">
+                        <div className="relative w-full md:w-3/4 xl:w-1/2 my-6 mx-auto max-w-3xl ">
                             {/*content*/}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-slate-950 outline-none focus:outline-none">
                                 {/*header*/}

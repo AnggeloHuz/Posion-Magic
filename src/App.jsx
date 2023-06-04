@@ -7,6 +7,7 @@ import { ContextoProvider } from './context/Context'
 import Buscar from './components/Buscar'
 import Footer from './components/Footer'
 import fondo from './assets/fondo.jpg'
+import Ingredientes from './components/Ingredientes'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Agregar />
           <Productos />
           <Buscar />
+          <Ingredientes />
         </main>
         <Footer />
       </ContextoProvider>

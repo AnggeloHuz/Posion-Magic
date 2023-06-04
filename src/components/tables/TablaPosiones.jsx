@@ -4,7 +4,7 @@ import Posion from "../productos/Posion";
 
 function TablaPosiones() {
 
-    const Context = useContext(Contexto)
+    const { posiones } = useContext(Contexto)
 
     return (
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg  m-8">
@@ -35,7 +35,7 @@ function TablaPosiones() {
                     </tr>
                 </thead>
                 <tbody>
-                    {Context.posiones.data.map((posion) => (
+                    {posiones.map((posion) => (
                         <Posion
                             key={posion.id}
                             datos={posion} />
